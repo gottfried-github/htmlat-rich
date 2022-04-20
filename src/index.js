@@ -11,10 +11,12 @@ function renderBottomUp(node, document) {
     if ('c' === node.label.value) return null
     const nodeData = emmet.parseMarkup(node.label.value, emmet.resolveConfig()).children[0]
 
+    console.log("renderBottomUp, nodeData", nodeData)
+
     if (!TAGS.includes(nodeData.name)) throw new Error(`the tagname '${nodeData.name}' isn't supported`)
 
     const dom = document.createElement(nodeData.name)
-    nodeData.attributes.forEach(attr => dom.setAttribute(attr.name, attr.value))
+    if (nodeData.attributes) nodeData.attributes.forEach(attr => dom.setAttribute(attr.name, attr.value))
 
     node.node.forEach(node => {
         const child = renderBottomUp(node, document)

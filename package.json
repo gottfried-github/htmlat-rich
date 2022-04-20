@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "parse labels as css selectors and generate appropriate html",
   "main": "src/index.js",
+  "type": "module",
   "scripts": {
     "test": "node index.js"
   },
