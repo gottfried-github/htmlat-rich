@@ -4,7 +4,11 @@
         Here is some text
     }}
     (div.photo-grid){{
-        (img[src='/a/path/to/img1.png']){{}}
-        (img[src='/a/path/to/img2.png']){{}}
+        (a[href='an/url1']){{
+            (img[src='/a/path/to/img1.png']){{image1 description}}
+        }}
+        (a[href='an/url2']){{
+            (img[src='/a/path/to/img2.png']){{image2 description}}
+        }}
     }}
 }}
