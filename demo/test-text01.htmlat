@@ -1,0 +1,10 @@
+(section){{
+    (h1.main-title){{Main title}}
+    (p.text-content){{
+        Here is some text
+    }}
+    (div.photo-grid){{
+        (img[src='/a/path/to/img1.png']){{}}
+        (img[src='/a/path/to/img2.png']){{}}
+    }}
+}}
