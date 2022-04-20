@@ -1,4 +1,4 @@
-# Description
+# HTML-adapted text
 Convert `semtext-pairs` into `html`, treating labels as `css` selectors that specify elements to generate.
 ```
 (section.content-section){{
@@ -10,7 +10,7 @@ Convert `semtext-pairs` into `html`, treating labels as `css` selectors that spe
     }}
 }}
 ```
-It uses `emmet` to parse the selectors, with the limitations, outlined below.
+It uses `emmet` to parse the selectors, with the limitations, outlined in the section below.
 
 ## What it doesn't do
 1. It will ignore any descendants, specified by the selector: `div#address-container>span#address` won't generate the span with it's attributes: it only will generate the div with it's attributes.
