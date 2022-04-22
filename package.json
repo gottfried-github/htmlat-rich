@@ -19,6 +19,6 @@
   "dependencies": {
     "emmet": "^2.3.6",
     "nearley": "^2.20.1",
-    "semtext-pairs_proto.2": "file:../semtext-pairs_proto.2"
+    "semtext-pairs_proto.2": "^0.0.4"
   }
 }
