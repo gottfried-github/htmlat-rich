@@ -10,7 +10,7 @@ Convert `semtext-pairs` into `html`, treating labels as `css` selectors that spe
     }}
 }}
 ```
-It uses `emmet` to parse the selectors, with [some limitations](#what-it-doesn't-do).
+It uses [`emmet`](https://www.npmjs.com/package/emmet) to parse the selectors, with [some limitations](#what-it-doesn't-do).
 
 ## What it doesn't do
 1. It will ignore any descendants, specified by the selector: `div#address-container>span#address` won't generate the span with it's attributes: it only will generate the div with it's attributes.
