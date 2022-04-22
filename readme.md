@@ -21,4 +21,5 @@ It uses `emmet` to parse the selectors, with the limitations, outlined in the se
 It will treat first-occurring text in the `img` entity as the `alt` attribute: `(img){{image description}}` will produce `<img alt="image description">`. It will ignore any other entities in the entity, e.g. `(img){{(div){{illegal div}} image description}}` will produce `<img alt=" image description">`.
 
 ## XSS prevention
-At first approximation, I suppose, the logic outlined in [showdown article](https://github.com/showdownjs/showdown/wiki/Markdown's-XSS-Vulnerability-(and-how-to-mitigate-it)) applies here. I.e., sanitize the generated html as opposed to the `semtext-pairs` formatted text.
+Generally, I suppose, the logic outlined in [showdown article](https://github.com/showdownjs/showdown/wiki/Markdown's-XSS-Vulnerability-(and-how-to-mitigate-it)) applies here. I.e., sanitize the generated html as opposed to the `semtext-pairs` formatted text.
+One issue here is that any tags get escaped as a consequence of using `createTextNode` in the renderer and become invisible to sanitizer (e.g., see `Sanitization` in `htmlat-nodejs`).
