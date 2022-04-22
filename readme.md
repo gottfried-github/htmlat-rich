@@ -1,5 +1,5 @@
 # HTML-adapted text
-Convert `semtext-pairs` into `html`, treating labels as `css` selectors that specify elements to generate.
+Convert [`semtext-pairs`](https://www.npmjs.com/package/semtext-pairs_proto.2) into `html`, treating labels as `css` selectors that specify elements to generate.
 ```
 (section.content-section){{
     (h1.section-title){{The section title}}
