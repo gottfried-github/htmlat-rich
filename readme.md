@@ -24,9 +24,12 @@ It will treat first-occurring text in the `img` entity as the `alt` attribute: `
 Generally, I suppose, the logic outlined in [showdown article](https://github.com/showdownjs/showdown/wiki/Markdown's-XSS-Vulnerability-(and-how-to-mitigate-it)) applies here. I.e., sanitize the generated html as opposed to the `semtext-pairs` formatted text.
 ### Sanitizing encoded content doesn't work
 By default, `htmlat-rich` escapes any html occurring in the text nodes. A consequence of that is that the escaped nodes become invisible to sanitizer and don't get erased.
+
 You can prevent escaping by setting the `spanTextNodes` option to `true`. However, then the content of text nodes will be wrapped in `span`s, which might not be what we want in the end. `spanToTextTextNodes` converts the `span`s into `Text` nodes.
+
 In conclusion, if you want to sanitize the output, what you should do is:
-    1. convert with `spanTextNodes` enabled
-    2. sanitize
-    3. convert `span`s to `Text` nodes with `spanToTextTextNodes`
+1. convert with `spanTextNodes` enabled
+2. sanitize
+3. convert `span`s to `Text` nodes with `spanToTextTextNodes`
+
 If any html tags left in the text after sanitization, they will be escaped.
