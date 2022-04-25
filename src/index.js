@@ -2,7 +2,12 @@ import nearley from 'nearley'
 import grammar from 'semtext-pairs_proto.2/src/grammar.js'
 import emmet from 'emmet'
 
-const TAGS = ['div', 'section', 'li', 'ul', 'ol', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'strong', 'span', 'p', 'img', 'a']
+const TAGS = [
+    'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'strong', 'span', 'br', 'a',
+    'section', 'ul', 'ol', 'li',
+    'div',
+    'img'
+]
 
 function firstOccuringText(node) {
     return node.find(node => 'text' === node.type)?.text
