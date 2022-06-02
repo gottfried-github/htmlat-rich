@@ -1,6 +1,6 @@
 {
   "name": "htmlat-rich",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "parse labels as css selectors and generate appropriate html",
   "main": "src/index.js",
   "type": "module",
