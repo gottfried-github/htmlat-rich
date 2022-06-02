@@ -35,4 +35,4 @@ In conclusion, if you want to sanitize the output, what you should do is:
 If any html tags left in the text after sanitization, they will be escaped.
 
 ## CLI
-Here is a [cli](https://www.npmjs.com/package/htmlat-cli) for this package, with some additional features.
+Here is a [cli](https://www.npmjs.com/package/htmlat-cli) with this package under the hood and some additional features.
