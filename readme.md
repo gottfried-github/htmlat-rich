@@ -33,3 +33,6 @@ In conclusion, if you want to sanitize the output, what you should do is:
 3. convert `span`s to `Text` nodes with `spanToTextTextNodes`
 
 If any html tags left in the text after sanitization, they will be escaped.
+
+## CLI
+Here is a [cli](https://www.npmjs.com/package/htmlat-cli) for this package, with some additional features.
